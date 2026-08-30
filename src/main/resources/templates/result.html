@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Phishing Analysis Result</title>
+
+</head>
+
+<body>
+
+    <h1>🛡️ Phishing Analysis Result</h1>
+
+
+    <!-- Display score -->
+
+    <h2>
+        Risk Score:
+        <span th:text="${score}"></span>/100
+    </h2>
+
+
+    <!-- Display result -->
+
+    <h2 th:text="${result}"></h2>
+
+
+    <!-- Display reasons -->
+
+    <h3>Detection Reasons:</h3>
+
+    <ul>
+
+        <li
+            th:each="reason : ${reasons}"
+            th:text="${reason}">
+        </li>
+
+    </ul>
+
+
+    <br>
+
+
+    <!-- Go back -->
+
+    <a href="/">
+        Analyze Another Email
+    </a>
+
+</body>
+
+</html>

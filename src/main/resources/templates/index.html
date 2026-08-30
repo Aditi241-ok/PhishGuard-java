@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Phishing Email Detector</title>
+
+</head>
+
+
+<body>
+
+    <h1>🛡️ Phishing Email Detector</h1>
+
+    <p>
+        Enter the details of an email to check whether it
+        may be a phishing email.
+    </p>
+
+
+    <!--
+        FORM
+
+        When the user clicks the button,
+        the data will be sent to:
+
+        /analyze
+
+        using POST.
+    -->
+
+    <form action="/analyze" method="post">
+
+
+        <!-- ========================= -->
+        <!-- SENDER -->
+        <!-- ========================= -->
+
+        <label for="sender">
+            Sender Email:
+        </label>
+
+        <br>
+
+        <input
+            type="email"
+            id="sender"
+            name="sender"
+            placeholder="example@email.com"
+            required
+        >
+
+        <br>
+        <br>
+
+
+        <!-- ========================= -->
+        <!-- SUBJECT -->
+        <!-- ========================= -->
+
+        <label for="subject">
+            Subject:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter email subject"
+            required
+        >
+
+        <br>
+        <br>
+
+
+        <!-- ========================= -->
+        <!-- EMAIL BODY -->
+        <!-- ========================= -->
+
+        <label for="body">
+            Email Body:
+        </label>
+
+        <br>
+
+        <textarea
+            id="body"
+            name="body"
+            rows="10"
+            cols="60"
+            placeholder="Paste the email content here..."
+            required
+        ></textarea>
+
+        <br>
+        <br>
+
+
+        <!-- ========================= -->
+        <!-- URL -->
+        <!-- ========================= -->
+
+        <label for="url">
+            URL found in email:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            id="url"
+            name="url"
+            placeholder="https://example.com"
+        >
+
+        <br>
+        <br>
+
+
+        <!-- ========================= -->
+        <!-- ATTACHMENT -->
+        <!-- ========================= -->
+
+        <label for="attachment">
+            Attachment Name:
+        </label>
+
+        <br>
+
+        <input
+            type="text"
+            id="attachment"
+            name="attachment"
+            placeholder="example.exe"
+        >
+
+        <br>
+        <br>
+        <br>
+
+
+        <!-- ========================= -->
+        <!-- ANALYZE BUTTON -->
+        <!-- ========================= -->
+
+        <button type="submit">
+            🔍 Analyze Email
+        </button>
+
+
+    </form>
+
+</body>
+
+</html>
